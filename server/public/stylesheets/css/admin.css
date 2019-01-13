@@ -1,0 +1,59 @@
+/* line 1, ../scss/admin.scss */
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+/* line 4, ../scss/admin.scss */
+.wrapper .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 8, ../scss/admin.scss */
+.wrapper .panel-left {
+  min-height: 100vh;
+  background: #263544;
+  padding: 0;
+}
+/* line 12, ../scss/admin.scss */
+.wrapper .panel-left .list-group {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background: #263544;
+  color: #b7c0cd;
+  position: relative;
+}
+/* line 20, ../scss/admin.scss */
+.wrapper .panel-left .list-group .list-group-title {
+  width: 100%;
+  display: block;
+}
+/* line 23, ../scss/admin.scss */
+.wrapper .panel-left .list-group .list-group-title:hover {
+  color: #42a5f5;
+  cursor: pointer;
+}
+/* line 30, ../scss/admin.scss */
+.wrapper .panel-left .list-group-item {
+  background: #263544;
+  color: #b7c0cd;
+  border-color: transparent;
+}
+/* line 34, ../scss/admin.scss */
+.wrapper .panel-left .list-group-item:hover {
+  color: #42a5f5;
+  cursor: pointer;
+}
+/* line 39, ../scss/admin.scss */
+.wrapper .panel-left .list-group > .list-group-item {
+  background: #152433;
+}
+/* line 41, ../scss/admin.scss */
+.wrapper .panel-left .list-group > .list-group-item:hover {
+  color: #2083d3;
+}
+/* line 46, ../scss/admin.scss */
+.wrapper .panel-right {
+  min-height: 100vh;
+}

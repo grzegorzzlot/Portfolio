@@ -1,0 +1,95 @@
+.home-page .me {
+  padding: 75px 0; }
+  .home-page .me .section-heading {
+    text-align: center;
+    color: #73879c;
+    font-family: Lato;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 0.44px; }
+  .home-page .me .me-content {
+    padding-top: 30px; }
+    .home-page .me .me-content .section-subtitle {
+      color: #506a85;
+      font-family: Lato;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.52px;
+      line-height: 34px; }
+    .home-page .me .me-content p {
+      text-align: justify;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.16px;
+      line-height: 25px;
+      margin-bottom: 20px; }
+  .home-page .me a {
+    text-decoration: none; }
+    .home-page .me a .btn {
+      color: #fff;
+      background-color: #05a081; }
+      .home-page .me a .btn:hover {
+        background-color: #049070; }
+
+.home-page .projects {
+  background-color: #f2f5f7;
+  padding: 75px 0; }
+  .home-page .projects .section-heading {
+    font-family: Lato;
+    font-size: 44px;
+    color: #506a85;
+    font-weight: 700;
+    letter-spacing: 0.44px;
+    line-height: 54px;
+    text-align: center;
+    margin-bottom: 30px; }
+
+.home-page .contact {
+  padding: 75px 0;
+  background-color: #2a3746; }
+  .home-page .contact .section-heading {
+    text-align: center;
+    color: #73879c;
+    font-family: Lato;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 0.44px;
+    margin-bottom: 30px; }
+  .home-page .contact .contact-form .form-group {
+    margin: 0 auto;
+    max-width: 700px;
+    margin-bottom: 20px; }
+    .home-page .contact .contact-form .form-group label {
+      color: #73879c; }
+    .home-page .contact .contact-form .form-group textarea {
+      min-height: 180px; }
+  .home-page .contact .contact-form .btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #05a081;
+    color: #fff; }
+    .home-page .contact .contact-form .btn:hover {
+      background-color: #049070; }
+  .home-page .contact .loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9999; }
+  .home-page .contact .validation-label {
+    width: 100%;
+    text-align: center;
+    color: red;
+    margin: 15px 0; }
+  .home-page .contact .alert {
+    position: fixed;
+    top: 20px;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .home-page .contact .captcha {
+    margin: 30px auto;
+    max-width: 700px;
+    display: flex; }

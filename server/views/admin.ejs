@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/css/admin.css"/>
+    <script language="javascript" src="/jquery.min.js"></script>
+    <script language="javascript" src="/js/bootstrap.min.js"></script>
+
+  </head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">  
+    </nav>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-3 panel-left">
+
+                <div class="list-group">                  
+                    <a href="/admin/add-post" id="add-post" class="list-group-item child">Dodaj post</a>
+                    <a href="/admin/post" id="show-posts" class="list-group-item child">Pokaż post</a>
+                </div>
+
+                <div class="list-group">
+                    <a href="/admin/add-media" id="add-media" class="list-group-item child">Dodaj media</a>
+                    <a href="/admin/media" id="show-media" class="list-group-item child">Pokaż media</a>
+                </div>
+
+                <%#<div class="list-group">%>
+                <%#    <a href="/admin/add-page" id="add-page" class="list-group-item child">Add page</a>%>
+                <%#    <a href="/admin/pages" id="show-pages" class="list-group-item child">Show pages</a>%>
+                <%#</div>%>
+
+                <div class="list-group">
+                    <a href="/admin/slider"><span class="list-group-title">Slider</span></a>
+                </div>
+
+
+                <div class="list-group">
+                    <span class="list-group-title">Kategorie</span>
+                </div>               
+                <div class="list-group-item">Technologie</div>                     
+            </div>  
+            <div class="col-md-9 panel-right">
+                <div id="admin-root">
+
+                
+                <%if(route==='POST'){%>
+                    <%include partials/post%>
+                <%}%>
+                <%if(route==='ADD_POST'){%>
+                    <%include partials/addPost%>
+                <%}%>
+                <%if(route==='MEDIA'){%>
+                    <%include partials/media%>
+                <%}%>
+                <%if(route==='ADD_MEDIA'){%>
+                    <%include partials/addMedia%>
+                <%}%>
+                <%if(route==='PAGE'){%>
+                    <%include partials/page%>
+                <%}%>
+                <%if(route==='ADD_PAGE'){%>
+                    <%include partials/addPage%>
+                <%}%>
+                <%if(route==='SLIDER'){%>
+                    <%include partials/slider%>
+                <%}%>
+
+                </div>
+            </div>                 
+        </div>
+    </div>
+
+        
+</body>
+
+</html>

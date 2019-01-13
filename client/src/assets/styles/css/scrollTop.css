@@ -1,0 +1,17 @@
+.scrollTop {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: #05a081;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer; }
+  .scrollTop a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 40px;
+    height: 40px; }

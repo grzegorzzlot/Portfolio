@@ -1,0 +1,131 @@
+@import './partials/variables';
+.home-page {
+    
+    .me {
+        padding: 75px 0;
+        .section-heading {
+            text-align: center;
+            color: #73879c;
+            font-family: Lato;
+            font-size: 44px;
+            font-weight: 700;
+            letter-spacing: 0.44px;
+        }
+        .me-content {
+            padding-top: 30px;
+            .section-subtitle {
+                color: #506a85;
+                font-family: Lato;
+                font-size: 26px;
+                font-weight: 700;
+                letter-spacing: 0.52px;
+                line-height: 34px;
+            }
+            p {
+                text-align: justify;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 0.16px;
+                line-height: 25px;
+                margin-bottom: 20px;
+            }
+        }
+        a {
+            text-decoration: none;            
+            .btn {
+                color: $white;
+                background-color: $green;
+                &:hover {
+                    background-color: #049070;
+                }
+            }
+        }
+    }
+
+    .projects {
+        background-color: #f2f5f7;
+        padding: 75px 0;
+        .section-heading {
+            font-family: Lato;
+            font-size: 44px;
+            color: #506a85;
+            font-weight: 700;
+            letter-spacing: 0.44px;
+            line-height: 54px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    .contact {
+        padding: 75px 0;
+        background-color: #2a3746;
+        .section-heading {
+            text-align: center;
+            color: #73879c;
+            font-family: Lato;
+            font-size: 44px;
+            font-weight: 700;
+            letter-spacing: 0.44px;
+            margin-bottom: 30px;
+        } 
+        .contact-form {           
+            .form-group {
+                margin: 0 auto;
+                max-width: 700px;
+                margin-bottom: 20px;
+                label {
+                    color: #73879c;
+                }
+                textarea {
+                    min-height: 180px;
+                }
+            }
+            .btn {
+                display: block;
+                margin: 0 auto;
+                background-color: $green;
+                color: $white;
+                &:hover {
+                    background-color: #049070;
+                }
+            }
+        }
+        .loader {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.3);
+            z-index: 9999; 
+        }
+        .validation-label {
+            width: 100%;
+            text-align: center;
+            color: red;
+            margin: 15px 0;
+        }
+        .alert {
+            position: fixed;
+            top: 20px;
+            z-index: 999;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+        .captcha {
+            margin: 30px auto;
+            max-width: 700px;
+            display: flex;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

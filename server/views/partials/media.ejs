@@ -1,0 +1,9 @@
+<figure class="figure container">
+    <div class="row">
+    <% data.map((i)=>{%>
+    <div class="col-md-3">
+    <img src=<%=i.url %> alt=<%=i.name %> class="figure-img img-thumbnail" />
+    </div>
+    <%})%>
+    </div>
+</figure>

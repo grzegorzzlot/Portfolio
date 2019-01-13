@@ -1,0 +1,7 @@
+.post .carousel {
+  margin: 0 auto;
+  max-width: 800px; }
+  .post .carousel .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; }

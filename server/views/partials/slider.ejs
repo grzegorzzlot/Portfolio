@@ -1,0 +1,20 @@
+<div class="row">
+    <form action="/admin/slider" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="browse-image">Browse images</label>
+            <input type="file" name="sliderImage" id="browse-image" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+
+
+<figure class="figure container">
+    <div class="row">
+    <% data.map((i)=>{%>
+    <div class="col-md-3">
+    <img src=<%=i.url %> class="figure-img img-thumbnail" />
+    </div>
+    <%})%>
+    </div>
+</figure>

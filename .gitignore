@@ -1,0 +1,17 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+#client
+# dependencies
+/client/node_modules
+
+# production
+/client/build
+
+# misc
+/client/.DS_Store
+/client/src/assets/images
+
+#server
+/server/node_modules
+/server/.sass-cache
+/server/public/images/slider
+/server/public/images/uploads
