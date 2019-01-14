@@ -6,9 +6,11 @@ const postSchema = new Schema({
     author: ObjectId,
     date: Date,
     title: String,
+    category: String,
     content: String,
     thumbnail: String,
-    gallery: Array 
+    gallery: Array,
+    technology: Array 
 });
 
 module.exports = mongoose.model('Post', postSchema);

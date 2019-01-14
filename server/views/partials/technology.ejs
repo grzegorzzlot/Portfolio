@@ -1,0 +1,24 @@
+<div class="row">
+    <form action="/admin/technology" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="browse-image">Nazwa technologii</label>
+            <input type="text" name="title" placeholder="Nazwa technologii">
+            <label for="browse-image">Opis</label>
+            <textarea name="content" placeholder="Opis"></textarea>
+            <label for="browse-image">Browse images</label>
+            <input type="file" name="technologyImage" id="browse-image">           
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+
+<figure class="figure container">
+    <div class="row">
+    <% data.map((i)=>{%>
+    <div class="col-md-3">
+    <h2><%=i.title%></h2>
+    <img src=<%=i.url %> class="figure-img img-thumbnail" />
+    </div>
+    <%})%>
+    </div>
+</figure>

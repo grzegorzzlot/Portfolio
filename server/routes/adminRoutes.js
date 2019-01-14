@@ -5,14 +5,15 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/blog');
 let Post = require('../models/post');
 let Media = require('../models/media');
-let Page = require('../models/page');
-let Slider = require('../models/slider')
+let Slider = require('../models/slider');
+let Technology = require('../models/technology');
 
 const multer = require('multer');
 const upload = multer({ dest: 'public/images/uploads/' });
 const uploadSlider = multer({ dest: 'public/images/slider/' })
-
-//render admin dashboard
+const uploadTechnology = multer({ dest: 'public/images/technology/' })
+ 
+//render admin dashboard 
 router.route('/')
     .all((req, res, next) => {
         if (req.user) {
@@ -58,21 +59,31 @@ router.route('/add-post')
                 res.render('admin', {route: 'ADD_POST'});
                 console.log('images not found!');
             } else { 
-                res.render('admin', {route: 'ADD_POST', mediaData: media});
+                Technology.find(function(err, technology) {
+                    if (err) {             
+                        res.render('admin', {route: 'ADD_POST'});
+                        console.log('images not found!');
+                    } else { 
+                        res.render('admin', {
+                            route: 'ADD_POST',
+                            mediaData: media,
+                            technologyData: technology
+                            });
+                    }
+                })
             }
-        })
-        
-        
+        })        
     })
-    .post((req, res)=>{
-        console.log(req.body) 
+    .post((req, res)=>{ 
         let date = new Date();
         let post = new Post();      
         post.title = req.body.title;
+        post.category = req.body.category;
         post.content = req.body.content;
         post.date = date;
         post.thumbnail = req.body.thumbnail;
         post.gallery = req.body.gallery;
+        post.technology = req.body.technology;
 
         post.save((err) => {
             if (err) { 
@@ -128,76 +139,70 @@ router.route('/add-media')
             }            
         });
     })
-
-//render pages route
-router.route('/pages')
-    .get((req, res)=>{
-        Page.find(function(err, data) {
-            if (err) { 
-                res.send(err); 
-            } else { 
-                res.render('admin', {route: 'PAGE', data: data});
-            }
-        })
-    })
-
-router.route('/add-page')
-    .get((req, res)=>{
-        Page.find(function(err, data) {
-            if (err) { 
-                res.send(err); 
-            } else { 
-                res.render('admin', {route: 'ADD_PAGE', data: data});
-            }
-        })
-        
-    })
-    .post((req, res)=>{
-        let page = new Page();
-        page.title = req.body.title;
-        page.content = req.body.content;
-        page.level = req.body.level;  
-        page.save((err) => { 
-            if (err) { 
-                res.send(err); 
-            }      
-            else {
-                res.redirect('/admin/pages') 
-            }
-        })
-    })
     
-    //slider
-    router.route('/slider')
-    .all((req, res, next) => {
-        if (req.user) {
-            next();
-        } else {
-            res.redirect('/error');
-        } 
-    })
-    .get((req, res) => {
-        Slider.find(function(err, slider) {
-            if (err) { 
-                res.send(err); 
-            } else { 
-                console.log(slider)
-                res.render('admin', {route: 'SLIDER', data: slider});
-            }
-        })          
-    })
-    .post(uploadSlider.single('sliderImage'), function (req, res, next) {
-        let slider = new Slider();
-        slider.url = req.file.path.replace('public', '');
-        slider.save((err) => {
-            if (err) { 
-                res.send(err); 
-            }      
-            else {
-                res.redirect('/admin/slider') 
-            }            
-        });
-    })
+//slider
+router.route('/slider')
+.all((req, res, next) => {
+    if (req.user) {
+        next();
+    } else {
+        res.redirect('/error');
+    } 
+})
+.get((req, res) => {
+    Slider.find(function(err, slider) {
+        if (err) { 
+            res.send(err); 
+        } else { 
+            res.render('admin', {route: 'SLIDER', data: slider});
+        }
+    })          
+})
+.post(uploadSlider.single('sliderImage'), function (req, res, next) {
+    let slider = new Slider();
+    slider.url = req.file.path.replace('public', '');
+    slider.save((err) => {
+        if (err) { 
+            res.send(err); 
+        }      
+        else {
+            res.redirect('/admin/slider') 
+        }            
+    });
+})
+
+//technology
+router.route('/technology')
+.all((req, res, next) => {
+    if (req.user) {
+        next();
+    } else {
+        res.redirect('/error'); 
+    } 
+})
+.get((req, res) => {
+    Technology.find(function(err, technology) {
+        if (err) { 
+            res.send(err); 
+        } else { 
+            res.render('admin', {route: 'TECHNOLOGY', data: technology});
+        }
+    })          
+})
+.post(uploadTechnology.single('technologyImage'), function (req, res, next) {
+    let technology = new Technology();
+    technology.url = req.file.path.replace('public', '');
+    technology.title = req.body.title;
+    technology.content = req.body.content;
+    technology.save((err) => {
+        if (err) { 
+            res.send(err); 
+        }      
+        else {
+            res.redirect('/admin/technology') 
+        }            
+    });
+})
 
 
 module.exports = router;

@@ -35,20 +35,14 @@
                     <a href="/admin/media" id="show-media" class="list-group-item child">Pokaż media</a>
                 </div>
 
-                <%#<div class="list-group">%>
-                <%#    <a href="/admin/add-page" id="add-page" class="list-group-item child">Add page</a>%>
-                <%#    <a href="/admin/pages" id="show-pages" class="list-group-item child">Show pages</a>%>
-                <%#</div>%>
-
                 <div class="list-group">
                     <a href="/admin/slider"><span class="list-group-title">Slider</span></a>
-                </div>
-
+                </div> 
 
                 <div class="list-group">
-                    <span class="list-group-title">Kategorie</span>
-                </div>               
-                <div class="list-group-item">Technologie</div>                     
+                    <a href="/admin/technology"><span class="list-group-title">Technologie</span></a>
+                </div>
+
             </div>  
             <div class="col-md-9 panel-right">
                 <div id="admin-root">
@@ -66,14 +60,11 @@
                 <%if(route==='ADD_MEDIA'){%>
                     <%include partials/addMedia%>
                 <%}%>
-                <%if(route==='PAGE'){%>
-                    <%include partials/page%>
-                <%}%>
-                <%if(route==='ADD_PAGE'){%>
-                    <%include partials/addPage%>
-                <%}%>
                 <%if(route==='SLIDER'){%>
                     <%include partials/slider%>
+                <%}%>
+                <%if(route==='TECHNOLOGY'){%>
+                    <%include partials/technology%>
                 <%}%>
 
                 </div>
