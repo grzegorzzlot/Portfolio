@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Routes from './Routes.js';
 import {connect} from 'react-redux';
-import {loadPost} from './actions/index.js';
+import {loadPost, loadTechnology} from './actions/index.js';
 import backend from './constants/backend.js';
 import axios from 'axios';
 import ScrollTop from './components/scrollTop/ScrollTop.js';
@@ -26,6 +26,15 @@ class App extends Component {
         .catch(err=>{
             console.log(err)
         })
+        axios.get(`${api}technology`)
+        .then(res=>{
+            if (this._isMounted) {
+                this.props.loadTechnology(res.data)
+            }           
+        })
+        .catch(err=>{
+            console.log(err)
+        })
     }
     componentWillUnmount() {
         this._isMounted = false
@@ -39,7 +48,7 @@ class App extends Component {
         );
     }
 }
-const mapDispatchToProps = { loadPost }
+const mapDispatchToProps = { loadPost, loadTechnology }
 
 
 export default connect(null, mapDispatchToProps)(App);

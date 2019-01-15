@@ -9,23 +9,24 @@ class Navigation extends Component {
     };
     toggleNavbar = ()=>{
         this.setState({
-          collapsed: !this.state.collapsed
-        });
+            collapsed: !this.state.collapsed
+        });                
     }
     componentDidMount() {
+        this._isMounted = true;
         const windowWidth = window.outerWidth;
         this.toggleCollapse(windowWidth);
         window.addEventListener('resize', ()=>{
             const windowWidth = window.outerWidth;
             this.toggleCollapse(windowWidth);
-        })
+        })      
     }
     toggleCollapse = (windowWidth)=>{
         if(windowWidth<=768) {
             this.setState({collapsed: false})
         } else {
             this.setState({collapsed: true})
-        }
+        }               
     }
     render() {
         return(

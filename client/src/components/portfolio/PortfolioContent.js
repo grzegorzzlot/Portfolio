@@ -13,7 +13,7 @@ class PortfolioContent extends Component {
                 <Card>
                     <CardImg top width="100%" src={url+i.thumbnail}/>
                     <CardBody>
-                        <h2>{i.title}</h2>
+                        <h1>{i.title}</h1>
                         <Link to={`/projekty/${encodeURIComponent(i.title)}`}>
                             <Button>Zobacz projekt</Button>
                         </Link>

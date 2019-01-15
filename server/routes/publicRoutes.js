@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/blog');   
 let Slider = require('../models/slider');
 let Post = require('../models/post');
+let Technology = require('../models/technology');
 
 router.route('/slider')  
     .get((req, res) => {
@@ -27,5 +28,16 @@ router.route('/post')
             }
         })          
     })
+
+router.route('/technology')  
+.get((req, res) => {
+    Technology.find(function(err, technology) {
+        if (err) { 
+            res.send(err); 
+        } else { 
+            res.send(technology);
+        }
+    })          
+})
 
 module.exports=router

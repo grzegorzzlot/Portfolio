@@ -9,8 +9,10 @@ class Post extends Component {
     render() { 
         let items = {
             title: '',
+            category: '',
             gallery: [],
-            connect: ''
+            connect: '',
+            technology: []
         }
         let url = decodeURIComponent(this.props.match.params.post);
         const collection = this.props.post;
