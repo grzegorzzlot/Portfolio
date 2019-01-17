@@ -12,7 +12,7 @@ import './assets/styles/css/global.css';
 
 library.add(fas, fab)
 
-class App extends Component {
+class App extends Component { 
     _isMounted = false
     componentDidMount() {
         this._isMounted = true

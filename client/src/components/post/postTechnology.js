@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
 import {connect} from 'react-redux';
 import backend from '../../constants/backend.js'
 
@@ -15,15 +14,15 @@ const PostTechnology = (props)=>{
         });    
     });
     const content = items.map((i, index)=>
-        <Col key={index} xs='6' sm='4' title={i.title}>
+        <div className='tile' key={index}>
             <img src={url+i.url} alt={i.title} />   
-        </Col>
+        </div>
     );
     return(
-        <div>
+        <div className='technologies'>
             <h2>Użyte technologie:</h2>
             <div className='technology-container'>
-                <Row>{content}</Row>
+                {content}
             </div>
         </div>                   
     )
