@@ -53,10 +53,12 @@
 .footer .footer-bottom {
   background-color: #283645;
   padding: 25px 0;
-  color: #707e8c; }
-  .footer .footer-bottom .navbar {
-    padding: 0; }
-    .footer .footer-bottom .navbar .navbar-nav {
-      flex-direction: row; }
-      .footer .footer-bottom .navbar .navbar-nav .nav-item {
-        margin-left: 15px; }
+  color: #707e8c;
+  display: flex;
+  justify-content: center; }
+
+@media screen and (max-width: 767px) {
+  .footer .footer-top .row > div {
+    margin-top: 25px; }
+    .footer .footer-top .row > div:first-child {
+      margin-top: 0px; } }

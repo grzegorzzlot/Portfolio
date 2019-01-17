@@ -7,12 +7,12 @@ import PostTechnology from './postTechnology.js';
 const PostContent = (props)=>{
     const { title, gallery, content, category, technology } = props.items;
     return(
-        <div>
+        <div className='content'>
             <Jumbotron>
                 <Container><h1>{title}</h1></Container>
             </Jumbotron>
             <Container>
-                <h2>Kategoria: {category}</h2>
+                <h2 className='category'>Kategoria: {category}</h2>
                 <PostGallery gallery={gallery}/>
                 <PostDescription content={content} />
                 <PostTechnology technology={technology} />

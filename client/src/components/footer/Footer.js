@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Navbar, Nav, NavItem } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import FindMe from './FindMe.js';
 import '../../assets/styles/css/footer.css'
 
@@ -23,17 +23,7 @@ class Footer extends Component {
                     </Container>
                 </div>                 
                 <div className="footer-bottom">
-                    <Container>
-                        <Navbar>
-                            <span className="copyrights">Grzegorz Zlot 2018</span>
-                            <Nav navbar>
-                                <NavItem>O mnie</NavItem>
-                                <NavItem>Ostatnie projekty</NavItem>
-                                <NavItem>Portfolio</NavItem>
-                                <NavItem>Kontakt</NavItem>
-                            </Nav>
-                        </Navbar>     
-                    </Container>
+                    <span className="copyrights">Grzegorz Zlot 2019</span>
                 </div> 
             </div>
         )

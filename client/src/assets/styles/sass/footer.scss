@@ -68,12 +68,18 @@
         background-color: #283645;
         padding: 25px 0;
         color: #707e8c;
-        .navbar {
-            padding: 0;
-            .navbar-nav {
-                flex-direction: row;
-                .nav-item {
-                    margin-left: 15px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        .footer-top {
+            .row>div{
+                margin-top: 25px;
+                &:first-child {
+                    margin-top: 0px;
                 }
             }
         }

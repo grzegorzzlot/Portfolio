@@ -1,0 +1,73 @@
+@import './partials/variables'; 
+
+.portfolio {
+    .jumbotron {
+        h1 {
+            font-family: Lato;
+        }
+    }
+    .content {
+        .card {
+            margin-bottom: 100px;
+            border: transparent;
+            img {
+                height: 220px;
+                object-fit: cover;
+                transition: .3s;
+            }
+            .card-body {
+                h3 {
+                    font-family: Lato;
+                    text-align: center;
+                    color: $upperBlue;
+                }
+                a {
+                    text-decoration: none;
+                    button {
+                        display: block;
+                        margin: 25px auto;
+                        background-color: $white;
+                        color: $black;
+                        border: 2px solid $green;
+                        transition: .3s;
+                        &:hover {
+                            color: $white;
+                            background-color: $green;
+                        }
+                    }
+                }
+                
+            }
+            &:hover{
+                &>img {
+                    transform: scale(1.02, 1.02);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio {
+        .content {
+            padding-top: 99px;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .portfolio {
+        .content {
+            .card {
+                margin-bottom: 40px;
+                border: transparent;
+                img {
+                    margin: 0 auto;
+                    max-width: 375px;                    
+                    height: 220px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

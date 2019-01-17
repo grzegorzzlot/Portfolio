@@ -13,7 +13,7 @@ class PortfolioContent extends Component {
                 <Card>
                     <CardImg top width="100%" src={url+i.thumbnail}/>
                     <CardBody>
-                        <h1>{i.title}</h1>
+                        <h3>{i.title}</h3>
                         <Link to={`/projekty/${encodeURIComponent(i.title)}`}>
                             <Button>Zobacz projekt</Button>
                         </Link>
@@ -22,10 +22,10 @@ class PortfolioContent extends Component {
             </Col>            
         );
         return(
-            <div>
+            <div className='content'>
                 <Jumbotron>
                     <Container>
-                        <h2>Galeria portfolio</h2>
+                        <h1>Galeria portfolio</h1>
                     </Container>                   
                 </Jumbotron>
                 <Container>

@@ -7,11 +7,11 @@ const TopBar = ()=>{
         <Row className="top-bar">
             <Container>
                 <Row>
-                    <Col className="top-bar-content" md="2" xs="4">
+                    <Col className="top-bar-content" md="2" xs="5">
                         <FontAwesomeIcon icon={['fas', 'envelope']}/>
                         <span>gzlot@wp.pl</span>
                     </Col>
-                    <Col className="top-bar-content socials" md={{size: 3, offset:7}} xs={{size:6, offset:2}}>
+                    <Col className="top-bar-content socials" md={{size: 3, offset:7}} xs={{size:6, offset:1}}>
                         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/">
                             <FontAwesomeIcon icon={['fab', 'facebook-f']}/>
                         </a> 

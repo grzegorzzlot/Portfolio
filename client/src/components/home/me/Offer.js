@@ -6,7 +6,7 @@ import img from '../../../assets/images/laptop.svg';
 class Offer extends Component {
     render() {
         return(
-            <Col xs="12" sm="4" md="4" lg="4" className="me-content">
+            <Col xs="12" sm="12" md="4" lg="4" className="me-content">
                 <Row>
                     <Col xs="3"><img src={img} alt="obrazek"/></Col>
                     <Col xs="9">
