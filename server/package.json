@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "production": "forever start ./bin/www",
+    "log": "forever list",
+    "watch": "forever start -w ./bin/www"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

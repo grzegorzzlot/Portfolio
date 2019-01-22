@@ -1,0 +1,30 @@
+@import './partials/variables';
+.offer {
+    .content {
+        h1, h2 {
+            font-family: Lato;
+        }
+        .container {
+            .row {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .offer {
+        .content {
+            padding-top: 99px;
+            h2 {
+                text-align: center;
+            } 
+            .container {
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

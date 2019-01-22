@@ -1,7 +1,6 @@
 @import './partials/variables';
 .post {
     .content {
-        padding-top: 99px;
         .jumbotron {
             h1 {
                 font-family: Lato;
@@ -71,11 +70,17 @@
         }
     }   
 }
+@media screen and (max-width: 767px) {
+    .post {
+        .content {
+            padding-top: 99px;
+        }
+    }
+}
 
 @media screen and (max-width: 575px) {
     .post {
         .content {
-            padding-top: 99px;
             .carousel {
                 .carousel-inner {           
                     .carousel-item {

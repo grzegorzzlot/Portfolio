@@ -18,6 +18,9 @@
     <div class="col-md-3">
     <h2><%=i.title%></h2>
     <img src=<%=i.url %> class="figure-img img-thumbnail" />
+    <form action="/admin/technology" method="DELETE" enctype="multipart/form-data">
+        <input type="submit" value="Usuń"/>
+    </form>
     </div>
     <%})%>
     </div>

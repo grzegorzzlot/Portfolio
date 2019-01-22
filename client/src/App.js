@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Root } from 'react-static'
 import Routes from './Routes.js';
 import {connect} from 'react-redux';
 import {loadPost, loadTechnology} from './actions/index.js';
@@ -42,8 +43,11 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Routes />
-                <ScrollTop />
+                <Root autoScrollToTop={true}>
+                    <Routes />
+                    <ScrollTop />
+                </Root>
+                
             </div>            
         );
     }

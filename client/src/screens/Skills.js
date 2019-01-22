@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HeaderPost from '../components/header/headerPost/HeaderPost.js';
 import Footer from '../components/footer/Footer.js';
 import SkillsContent from '../components/skills/SkillsContent.js';
+import '../assets/styles/css/technology.css'
 
 class Skills extends Component {
     render() {

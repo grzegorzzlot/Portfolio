@@ -10,7 +10,9 @@ const SkillsContent = (props)=>{
     const items = technology.map((i, index)=>
         <Col xs='6' sm='4' md='3' key={index}>
             <Card>
-                <CardImg top width="100%" src={url+i.url} alt={i.title} />
+                <div className="img-container">
+                    <CardImg top src={url+i.url} alt={i.title} />
+                </div>                
                 <CardBody>
                     <ModalWrapper data={i}/>
                 </CardBody>
@@ -18,7 +20,7 @@ const SkillsContent = (props)=>{
         </Col>
     )
     return(
-        <div>
+        <div className="content">
             <Jumbotron>
                 <Container><h1>Moje umiejętności</h1></Container>
             </Jumbotron>

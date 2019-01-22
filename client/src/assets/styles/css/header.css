@@ -41,40 +41,42 @@
 .header > .container-fluid {
   border-bottom: 1px solid #e6e9ed; }
 
-.header .carousel .slider-box {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  z-index: 10;
-  transform: translate(-50%, 0); }
-  .header .carousel .slider-box h1 {
-    color: #fff;
-    text-align: center; }
-  .header .carousel .slider-box .button-group {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    display: flex; }
-    .header .carousel .slider-box .button-group .btn {
-      width: 190px;
-      font-size: 20px;
-      padding: 0.75rem 1.25rem;
-      margin-bottom: 20px; }
-      .header .carousel .slider-box .button-group .btn.first {
-        background-color: #05a081;
-        border-color: #05a081; }
-      .header .carousel .slider-box .button-group .btn.second {
-        background-color: #fff;
-        border-color: #fff;
-        color: #000; }
-
-.header .carousel .carousel-image {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.4);
-  background-blend-mode: multiply;
-  background-position: center; }
+.header .slider-wrapper {
+  position: relative; }
+  .header .slider-wrapper .ant-carousel .carousel-image {
+    z-index: 999999999;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    background-position: center; }
+  .header .slider-wrapper .slider-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, 0); }
+    .header .slider-wrapper .slider-box h1 {
+      color: #fff;
+      text-align: center; }
+    .header .slider-wrapper .slider-box .button-group {
+      margin-top: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      display: flex; }
+      .header .slider-wrapper .slider-box .button-group .btn {
+        width: 190px;
+        font-size: 20px;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 20px; }
+        .header .slider-wrapper .slider-box .button-group .btn.first {
+          background-color: #05a081;
+          border-color: #05a081; }
+        .header .slider-wrapper .slider-box .button-group .btn.second {
+          background-color: #fff;
+          border-color: #fff;
+          color: #000; }
 
 @media screen and (max-width: 768px) {
   .header .container-fluid {

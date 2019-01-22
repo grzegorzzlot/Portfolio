@@ -203,6 +203,13 @@ router.route('/technology')
         }            
     });
 })
+.put((req, res)=>{
+    const title = req.body.title
+    Technology.deleteOne({ title: title }, function(err){
+        if (err) return console.log(err); 
+        res.redirect('/admin/technology');
+    })
+});
 
 
 module.exports = router;

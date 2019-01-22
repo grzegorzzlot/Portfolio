@@ -1,0 +1,14 @@
+.offer .content h1, .offer .content h2 {
+  font-family: Lato; }
+
+.offer .content .container .row {
+  margin-bottom: 40px; }
+
+@media screen and (max-width: 767px) {
+  .offer .content {
+    padding-top: 99px; }
+    .offer .content h2 {
+      text-align: center; }
+    .offer .content .container img {
+      display: block;
+      margin: 0 auto; } }

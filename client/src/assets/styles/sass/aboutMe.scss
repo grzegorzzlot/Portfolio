@@ -1,0 +1,21 @@
+@import './partials/variables';
+.about-me {
+    .content {
+        h1 {
+            font-family: Lato;
+        }
+        .container {
+            .tiles {
+                margin: 40px auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-me {
+        .content {
+            padding-top: 99px;
+        }
+    }
+}

@@ -1,52 +1,57 @@
-.post .content {
-  padding-top: 99px; }
-  .post .content .jumbotron h1 {
-    font-family: Lato; }
-  .post .content .category {
-    font-size: 30px;
-    color: #506a85;
-    padding: 20px 0; }
-  .post .content .carousel {
-    margin: 0 auto;
-    max-width: 800px; }
-    .post .content .carousel .carousel-inner .carousel-item img {
+.post .content .jumbotron h1 {
+  font-family: Lato; }
+
+.post .content .category {
+  font-size: 30px;
+  color: #506a85;
+  padding: 20px 0; }
+
+.post .content .carousel {
+  margin: 0 auto;
+  max-width: 800px; }
+  .post .content .carousel .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; }
+  .post .content .carousel .carousel-control-prev-icon,
+  .post .content .carousel .carousel-control-next-icon {
+    padding: 15px;
+    border: 1px #05a081 solid;
+    border-radius: 50%;
+    background-color: #05a081;
+    cursor: pointer;
+    background-size: 60%; }
+  .post .content .carousel .carousel-indicators .active {
+    background-color: #05a081; }
+
+.post .content .post-content .description {
+  margin: 25px 0; }
+
+.post .content .technologies h2 {
+  font-size: 30px;
+  color: #506a85;
+  padding: 20px 0; }
+
+.post .content .technologies .technology-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px; }
+  .post .content .technologies .technology-container .tile {
+    margin-top: 15px;
+    border: 1px #ccc solid;
+    width: 280px;
+    height: 280px;
+    padding: 20px; }
+    .post .content .technologies .technology-container .tile img {
       width: 100%;
-      height: 500px;
+      height: 100%;
       object-fit: cover; }
-    .post .content .carousel .carousel-control-prev-icon,
-    .post .content .carousel .carousel-control-next-icon {
-      padding: 15px;
-      border: 1px #05a081 solid;
-      border-radius: 50%;
-      background-color: #05a081;
-      cursor: pointer;
-      background-size: 60%; }
-    .post .content .carousel .carousel-indicators .active {
-      background-color: #05a081; }
-  .post .content .post-content .description {
-    margin: 25px 0; }
-  .post .content .technologies h2 {
-    font-size: 30px;
-    color: #506a85;
-    padding: 20px 0; }
-  .post .content .technologies .technology-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 50px; }
-    .post .content .technologies .technology-container .tile {
-      margin-top: 15px;
-      border: 1px #ccc solid;
-      width: 280px;
-      height: 280px;
-      padding: 20px; }
-      .post .content .technologies .technology-container .tile img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
+
+@media screen and (max-width: 767px) {
+  .post .content {
+    padding-top: 99px; } }
 
 @media screen and (max-width: 575px) {
-  .post .content {
-    padding-top: 99px; }
-    .post .content .carousel .carousel-inner .carousel-item img {
-      height: 390px; } }
+  .post .content .carousel .carousel-inner .carousel-item img {
+    height: 390px; } }

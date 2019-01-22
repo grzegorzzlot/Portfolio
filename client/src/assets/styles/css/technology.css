@@ -1,0 +1,35 @@
+.skills .content .jumbotron h1 {
+  font-family: Lato; }
+
+.skills .content .card {
+  border: transparent;
+  margin-bottom: 20px; }
+  .skills .content .card .img-container {
+    height: 250px; }
+    .skills .content .card .img-container img {
+      object-fit: cover;
+      width: 100%; }
+  .skills .content .card button {
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #05a081;
+    transition: .3s; }
+    .skills .content .card button:hover {
+      color: #fff;
+      background-color: #05a081; }
+
+@media screen and (max-width: 767px) {
+  .skills .content {
+    padding-top: 99px; } }
+
+@media screen and (max-width: 767px) {
+  .skills .content .card {
+    border: transparent;
+    margin-bottom: 20px; }
+    .skills .content .card .img-container {
+      height: 250px; }
+      .skills .content .card .img-container img {
+        object-fit: cover;
+        width: 100%; } }

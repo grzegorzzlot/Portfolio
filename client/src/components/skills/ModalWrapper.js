@@ -14,7 +14,7 @@ class ModalWrapper extends Component {
         const { title, content } = this.props.data;
         return(
             <div>
-                <Button color="danger" onClick={this.toggle}>{title}</Button>
+                <Button onClick={this.toggle}>{title}</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                 <ModalHeader toggle={this.toggle}>{title}</ModalHeader>
                 <ModalBody>

@@ -11,7 +11,7 @@ class About extends Component {
                     <Col xs="3"><img src={img} alt="obrazek"/></Col>
                     <Col xs="9">
                         <h3 className="section-subtitle">Parę słów o mnie</h3>
-                        <p>Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.</p>                
+                        <p>Jestem ambitnym, pozytywnie nastawionym Front end developerem, który lubi uczyć się nowych rzeczy i pogłębiać swoją wiedzę.</p>                
                             <Link to="/o_mnie">
                             <Button color="default">Zobacz więcej</Button>
                             </Link>                                                

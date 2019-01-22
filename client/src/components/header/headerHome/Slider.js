@@ -1,13 +1,12 @@
 import React, { Component } from 'react'; 
-import { Carousel, CarouselItem } from 'reactstrap';
+import { Carousel } from 'antd';
 import backend from '../../../constants/backend.js';
 import axios from 'axios';
 import SliderBox from './SliderBox.js';
 
 class Slider extends Component {
     state = {
-        data: [],
-        activeIndex: 0
+        data: []
     }
     _isMounted = false
     componentDidMount() {
@@ -23,43 +22,27 @@ class Slider extends Component {
             console.log(err)
         })        
     }
-    next = ()=>{
-        const {data} = this.state;
-        if (this.animating) return;
-        const nextIndex = this.state.activeIndex === data.length - 1 ? 0 : this.state.activeIndex + 1;
-        this.setState({ activeIndex: nextIndex });
-    }
-    
-    previous = ()=>{
-        const {data} = this.state;
-        if (this.animating) return;
-        const nextIndex = this.state.activeIndex === 0 ? data.length - 1 : this.state.activeIndex - 1;
-        this.setState({ activeIndex: nextIndex });
-    }
     componentWillUnmount() {
         this._isMounted = false
     }
     
     render() { 
-        const { data, activeIndex } = this.state;
-        const { url } = backend;  
+        const { data } = this.state;
+        const { url } = backend; 
+        
+        const items = data.map((i, index)=>
+        <div key={index}>
+            <div key={index} className='carousel-image' style={{backgroundImage: `url(${url+i.url})`}}>               
+            </div> 
+        </div>
+        ) 
         return(
-            <Carousel
-            className='carousel-fade'
-            activeIndex={activeIndex}
-            next={this.next}
-            previous={this.previous}
-            pause={false}
-            >   
+            <div className='slider-wrapper'>
+                <Carousel effect="fade" vertical autoplay={true} dots={false}>
+                    {items}                    
+                </Carousel>
                 <SliderBox />
-                {data.map((i,index)=>
-                    <CarouselItem
-                    key={index}
-                    >
-                        <div className='carousel-image' style={{backgroundImage: `url(${url}${i.url})`}}></div>
-                    </CarouselItem>                    
-                )}
-            </Carousel>
+            </div>
         )                
     }
 }
